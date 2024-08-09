@@ -1,4 +1,4 @@
-import bcrypt from "bcrypt";
+import bcrypt from "bcryptjs";
 import CreateCredentialDto from "../dtos/createCredentialDto";
 import { CredentialRepository } from "../repositories/credential.repository";
 import { Credential } from "../entities/Credential";
