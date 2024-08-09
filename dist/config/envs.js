@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.JWT_SECRET = exports.DB_PORT = exports.DB_HOST = exports.DB_PASSWORD = exports.DB_USER = exports.DB_NAME = exports.PORT = void 0;
 const dotenv_1 = __importDefault(require("dotenv"));
 dotenv_1.default.config();
-exports.PORT = Number(process.env.PORT);
+exports.PORT = Number(process.env.PORT) || 3000;
 exports.DB_NAME = process.env.DB_NAME || "";
 exports.DB_USER = process.env.DB_USER || "";
 exports.DB_PASSWORD = process.env.DB_PASSWORD || "";
