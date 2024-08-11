@@ -10,15 +10,19 @@ const Category_1 = require("../entities/Category");
 const Product_1 = require("../entities/Product");
 exports.AppDataSource = new typeorm_1.DataSource({
     type: "postgres",
-    host: envs_1.DB_HOST,
-    port: envs_1.DB_PORT,
-    username: envs_1.DB_USER,
-    password: envs_1.DB_PASSWORD,
-    database: envs_1.DB_NAME,
+    url: envs_1.DATABASE_URL, // Usar la URL de la base de datos si está disponible
+    host: envs_1.DATABASE_URL ? undefined : envs_1.DB_HOST,
+    port: envs_1.DATABASE_URL ? undefined : envs_1.DB_PORT,
+    username: envs_1.DATABASE_URL ? undefined : envs_1.DB_USER,
+    password: envs_1.DATABASE_URL ? undefined : envs_1.DB_PASSWORD,
+    database: envs_1.DATABASE_URL ? undefined : envs_1.DB_NAME,
     synchronize: true,
     // dropSchema: true,
     logging: false,
     entities: [User_1.User, Credential_1.Credential, Order_1.Order, Product_1.Product, Category_1.Category],
     subscribers: [],
     migrations: [],
+    ssl: {
+        rejectUnauthorized: false // Necesario para conexiones SSL en Render
+    }
 });
