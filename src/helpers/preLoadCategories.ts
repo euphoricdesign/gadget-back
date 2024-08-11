@@ -8,14 +8,16 @@ interface ICategory {
 
 const categoriesToPreLoad: ICategory[] = [
     { name: 'Smartphones' },
-    { name: 'Laptops' },
+    { name: 'MR' },
     { name: 'Ipads' },
-    { name: 'Headphones' },
+    { name: 'Watches' },
     { name: 'AirPods' },
-    { name: 'Printers' },
-    { name: 'Monitors' },
-    { name: 'Storage' },
-    { name: 'Accessories' }
+    { name: 'Speakers' },
+    { name: 'Laptops' },
+    { name: 'Televisions' },
+    { name: 'Accessories' },
+    { name: 'Keyboards' },
+    { name: 'Computers' }
 ];
 
 export const preLoadCategories = async () => {
