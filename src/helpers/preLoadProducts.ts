@@ -72,6 +72,56 @@ const productsToPreLoad: IProduct[] = [
     categoryId: 6,
     stock: 10,
   },
+  {
+    name: "MacBook Pro",
+    price: 1299,
+    description:
+      "Power through any task with the MacBook Pro: featuring the M1 chip for unmatched performance, a stunning Retina display, and all-day battery life, the MacBook Pro is the ultimate tool for professionals and creatives alike. Elevate your work with the MacBook Pro.",
+    image:
+      "https://ar.oneclickstore.com/wp-content/uploads/2021/12/MacBook_Pro_16-in_Space_Gray_PDP_Image_Position-1__MXLA.jpeg",
+    categoryId: 7,
+    stock: 10,
+  },
+  {
+    name: "Apple TV 4K",
+    price: 179,
+    description:
+      "Experience the ultimate home entertainment with the Apple TV 4K: with stunning 4K HDR visuals, immersive sound, and access to your favorite streaming services, the Apple TV 4K brings a cinematic experience to your living room.",
+    image:
+      "https://m.media-amazon.com/images/I/51Y-Dulc3bL._AC_SL1024_.jpg",
+    categoryId: 8,
+    stock: 10,
+  },
+  {
+    name: "AirTag",
+    price: 29,
+    description:
+      "Keep track of your belongings with the AirTag: attach it to your keys, backpack, or any other item, and easily locate it using the Find My app. With AirTag, your essentials are always within reach.",
+    image:
+      "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/airtag-4pack-select-202104_FV1?wid=890&hei=740&fmt=jpeg&qlt=90&.v=1617761668000",
+    categoryId: 9,
+    stock: 10,
+  },
+  {
+    name: "Magic Keyboard",
+    price: 99,
+    description:
+      "Elevate your typing experience with the Magic Keyboard: featuring a sleek design, comfortable keys, and a built-in rechargeable battery, the Magic Keyboard is the perfect companion for your Mac, iPad, or iPhone.",
+    image:
+      "https://m.media-amazon.com/images/I/71cboO+0CcL._AC_UF894,1000_QL80_.jpg",
+    categoryId: 10,
+    stock: 10,
+  },
+  {
+    name: "iMac 24-inch",
+    price: 1299,
+    description:
+      "Transform your workspace with the iMac 24-inch: featuring the M1 chip, a stunning 4.5K Retina display, and a sleek, all-in-one design, the iMac is perfect for everything from work to entertainment.",
+    image:
+      "https://cdn-ipoint.waugi.com.ar/26956-large_default/imac-24-retina-45k-m1-chip-8-core-cpu-8-core-gpu-512gb-ssd-blue.jpg",
+    categoryId: 11,
+    stock: 10,
+  }
 ];
 
 export const preLoadProducts = async () => {
