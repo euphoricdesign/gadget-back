@@ -15,14 +15,16 @@ const Category_1 = require("../entities/Category");
 const category_respository_1 = require("../repositories/category.respository");
 const categoriesToPreLoad = [
     { name: 'Smartphones' },
-    { name: 'Laptops' },
+    { name: 'MR' },
     { name: 'Ipads' },
-    { name: 'Headphones' },
+    { name: 'Watches' },
     { name: 'AirPods' },
-    { name: 'Printers' },
-    { name: 'Monitors' },
-    { name: 'Storage' },
-    { name: 'Accessories' }
+    { name: 'Speakers' },
+    { name: 'Laptops' },
+    { name: 'Televisions' },
+    { name: 'Accessories' },
+    { name: 'Keyboards' },
+    { name: 'Computers' }
 ];
 const preLoadCategories = () => __awaiter(void 0, void 0, void 0, function* () {
     const categories = yield category_respository_1.CategoryRepository.find();
