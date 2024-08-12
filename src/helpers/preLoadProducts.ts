@@ -108,7 +108,7 @@ const productsToPreLoad: IProduct[] = [
     description:
       "Elevate your typing experience with the Magic Keyboard: featuring a sleek design, comfortable keys, and a built-in rechargeable battery, the Magic Keyboard is the perfect companion for your Mac, iPad, or iPhone.",
     image:
-      "https://m.media-amazon.com/images/I/71cboO+0CcL._AC_UF894,1000_QL80_.jpg",
+      "https://dcdn.mitiendanube.com/stores/002/363/620/products/mmmr3y1-f09edb6a447bf795bf16615276168211-640-0.jpg",
     categoryId: 10,
     stock: 10,
   },
@@ -118,7 +118,7 @@ const productsToPreLoad: IProduct[] = [
     description:
       "Transform your workspace with the iMac 24-inch: featuring the M1 chip, a stunning 4.5K Retina display, and a sleek, all-in-one design, the iMac is perfect for everything from work to entertainment.",
     image:
-      "https://cdn-ipoint.waugi.com.ar/26956-large_default/imac-24-retina-45k-m1-chip-8-core-cpu-8-core-gpu-512gb-ssd-blue.jpg",
+      "https://thegoodguys.sirv.com/products/50088184/50088184_883101.PNG",
     categoryId: 11,
     stock: 10,
   }
