@@ -118,7 +118,7 @@ const productsToPreLoad: IProduct[] = [
     description:
       "Transform your workspace with the iMac 24-inch: featuring the M1 chip, a stunning 4.5K Retina display, and a sleek, all-in-one design, the iMac is perfect for everything from work to entertainment.",
     image:
-      "https://thegoodguys.sirv.com/products/50088184/50088184_883101.PNG",
+      "https://i.ebayimg.com/images/g/0dEAAOSwoMxl4waQ/s-l1600.jpg",
     categoryId: 11,
     stock: 10,
   }
