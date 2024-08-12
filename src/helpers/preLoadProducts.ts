@@ -88,7 +88,7 @@ const productsToPreLoad: IProduct[] = [
     description:
       "Experience the ultimate home entertainment with the Apple TV 4K: with stunning 4K HDR visuals, immersive sound, and access to your favorite streaming services, the Apple TV 4K brings a cinematic experience to your living room.",
     image:
-      "https://m.media-amazon.com/images/I/51Y-Dulc3bL._AC_SL1024_.jpg",
+      "https://rossellimac.es/cdn/shop/files/IMG-2608525_ac9132a0-5b7a-4193-8c00-ee461617abab.jpg?v=1689760224&width=823",
     categoryId: 8,
     stock: 10,
   },
@@ -98,7 +98,7 @@ const productsToPreLoad: IProduct[] = [
     description:
       "Keep track of your belongings with the AirTag: attach it to your keys, backpack, or any other item, and easily locate it using the Find My app. With AirTag, your essentials are always within reach.",
     image:
-      "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/airtag-4pack-select-202104_FV1?wid=890&hei=740&fmt=jpeg&qlt=90&.v=1617761668000",
+      "https://imagedelivery.net/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/15206840_01/w=1500,h=1500,fit=pad",
     categoryId: 9,
     stock: 10,
   },
