@@ -108,7 +108,7 @@ const productsToPreLoad: IProduct[] = [
     description:
       "Elevate your typing experience with the Magic Keyboard: featuring a sleek design, comfortable keys, and a built-in rechargeable battery, the Magic Keyboard is the perfect companion for your Mac, iPad, or iPhone.",
     image:
-      "https://m.media-amazon.com/images/I/71cboO+0CcL._AC_UF894,1000_QL80_.jpg",
+      "https://dcdn.mitiendanube.com/stores/002/363/620/products/mmmr3y1-f09edb6a447bf795bf16615276168211-640-0.jpg",
     categoryId: 10,
     stock: 10,
   },
