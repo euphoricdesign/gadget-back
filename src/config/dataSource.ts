@@ -25,6 +25,6 @@ export const AppDataSource = new DataSource({
   migrations: [],
   ssl: DATABASE_URL ? {
     rejectUnauthorized: true,
-    ca: process.env.CA_CERT, // Usamos la variable de entorno que contiene el certificado
+    ca: fs.readFileSync(path.join(__dirname, '..', '..', 'certs', 'ca.pem')).toString(),
   } : false
 });
