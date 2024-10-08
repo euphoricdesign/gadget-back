@@ -5,22 +5,24 @@ import { Credential } from "../entities/Credential";
 import { Order } from "../entities/Order";
 import { Category } from "../entities/Category";
 import { Product } from "../entities/Product";
+import * as fs from 'fs';
+import * as path from 'path';
 
 export const AppDataSource = new DataSource({
   type: "postgres",
-  url: DATABASE_URL, // Usar la URL de la base de datos si está disponible
+  url: DATABASE_URL,
   host: DATABASE_URL ? undefined : DB_HOST,
   port: DATABASE_URL ? undefined : DB_PORT,
   username: DATABASE_URL ? undefined : DB_USER,
   password: DATABASE_URL ? undefined : DB_PASSWORD,
   database: DATABASE_URL ? undefined : DB_NAME,
   synchronize: true,
-  // dropSchema: true,
   logging: false,
   entities: [User, Credential, Order, Product, Category],
   subscribers: [],
   migrations: [],
-  ssl: {
-    rejectUnauthorized: false // Necesario para conexiones SSL en Render
-  }
+  ssl: DATABASE_URL ? {
+    rejectUnauthorized: true,
+    ca: fs.readFileSync(path.join(__dirname, '..', '..', 'certs', 'ca.pem')).toString(),
+  } : false
 });
