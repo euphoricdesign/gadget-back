@@ -23,10 +23,16 @@ export class User {
     })
     email: string;
 
-    @Column()
+    @Column({
+        nullable: false,
+        default: 'Sin dirección'
+    })
     address: string;
 
-    @Column()
+    @Column({
+        nullable: false,
+        default: 'Sin telefono'
+    })
     phone: string;
 
     @Column({

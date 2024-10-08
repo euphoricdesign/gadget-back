@@ -5,6 +5,10 @@ export class Credential {
     @PrimaryGeneratedColumn()
     id: number;
 
-    @Column()
-    password: string;
+    @Column({
+        nullable: false,
+        default: 'default_password' // Cambia este valor por algo más apropiado para tu caso
+      })
+      password: string;
+      
 }
