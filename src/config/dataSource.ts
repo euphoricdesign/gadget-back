@@ -21,7 +21,8 @@ export const AppDataSource = new DataSource({
   entities: [User, Credential, Order, Product, Category],
   subscribers: [],
   migrations: [],
-  ssl: {
-    rejectUnauthorized: false,
-  },
+  ssl: DATABASE_URL ? {
+    rejectUnauthorized: true,
+    ca: fs.readFileSync(path.join(__dirname, '..', '..', 'certs', 'ca.pem')).toString(),
+  } : false
 });
