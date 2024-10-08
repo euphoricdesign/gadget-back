@@ -11,11 +11,17 @@ import * as path from 'path';
 export const AppDataSource = new DataSource({
   type: "postgres",
   url: DATABASE_URL,
-  ssl: {
-    rejectUnauthorized: false, // Cambia esto a true cuando tengas el certificado correcto
-    ca: process.env.CA_CERT || (DATABASE_URL ? fs.readFileSync(path.join(__dirname, '..', '..', 'certs', 'ca.pem')).toString() : undefined),
-  },
-  entities: [User, Credential, Order, Product, Category],
+  host: DATABASE_URL ? undefined : DB_HOST,
+  port: DATABASE_URL ? undefined : DB_PORT,
+  username: DATABASE_URL ? undefined : DB_USER,
+  password: DATABASE_URL ? undefined : DB_PASSWORD,
+  database: DATABASE_URL ? undefined : DB_NAME,
   synchronize: true,
   logging: false,
+  entities: [User, Credential, Order, Product, Category],
+  subscribers: [],
+  migrations: [],
+  ssl: {
+    rejectUnauthorized: false,
+  },
 });
