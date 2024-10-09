@@ -8,7 +8,7 @@ import { Product } from "../entities/Product";
 import * as fs from 'fs';
 import * as path from 'path';
 
-console.log('CA Path:', path.join(__dirname, '..', '..', 'certs', 'ca.pem'));
+const caPath = path.join(__dirname, '..', '..', 'certs', 'ca.pem');
 
 export const AppDataSource = new DataSource({
   type: "postgres",
@@ -25,6 +25,6 @@ export const AppDataSource = new DataSource({
   migrations: [],
   ssl: DATABASE_URL ? {
     rejectUnauthorized: true,
-    ca: fs.readFileSync(path.join(__dirname, 'src', 'certs', 'ca.pem')).toString(),
+    ca: fs.existsSync(caPath) ? fs.readFileSync(caPath).toString() : undefined,
   } : false
 });

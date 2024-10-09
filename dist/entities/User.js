@@ -39,11 +39,17 @@ __decorate([
     __metadata("design:type", String)
 ], User.prototype, "email", void 0);
 __decorate([
-    (0, typeorm_1.Column)(),
+    (0, typeorm_1.Column)({
+        nullable: false,
+        default: 'Sin dirección'
+    }),
     __metadata("design:type", String)
 ], User.prototype, "address", void 0);
 __decorate([
-    (0, typeorm_1.Column)(),
+    (0, typeorm_1.Column)({
+        nullable: false,
+        default: 'Sin telefono'
+    }),
     __metadata("design:type", String)
 ], User.prototype, "phone", void 0);
 __decorate([
