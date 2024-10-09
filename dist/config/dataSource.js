@@ -33,7 +33,7 @@ const Category_1 = require("../entities/Category");
 const Product_1 = require("../entities/Product");
 const fs = __importStar(require("fs"));
 const path = __importStar(require("path"));
-console.log('CA Path:', path.join(__dirname, '..', '..', 'certs', 'ca.pem'));
+const caPath = path.join(__dirname, '..', '..', 'certs', 'ca.pem');
 exports.AppDataSource = new typeorm_1.DataSource({
     type: "postgres",
     url: envs_1.DATABASE_URL,
@@ -49,6 +49,6 @@ exports.AppDataSource = new typeorm_1.DataSource({
     migrations: [],
     ssl: envs_1.DATABASE_URL ? {
         rejectUnauthorized: true,
-        ca: fs.readFileSync(path.join(__dirname, 'src', 'certs', 'ca.pem')).toString(),
+        ca: fs.existsSync(caPath) ? fs.readFileSync(caPath).toString() : undefined,
     } : false
 });
